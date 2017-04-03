@@ -11,8 +11,9 @@ public class Car implements Valuable {
 
 	@Override
 	public double EstimateValue(int month) {
-		// TODO Auto-generated method stub
-		return 0;
+		double nprice;
+		nprice= price*0.8*(Math.pow(1.01,month));
+		return nprice;
 	}
 	public String toString(){
 		return String.format("Car name:",name,"\n","initial price:",price);

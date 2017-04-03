@@ -51,7 +51,7 @@ public class SavingAccount extends Account implements Valuable{
 
 	@Override
 	public double EstimateValue(int month) {
-		// TODO Auto-generated method stub
+		balance = balance*(Math.pow(1+loan,numonth));
 		return 0;
 	}
 	public String toString(){

@@ -11,8 +11,7 @@ public class Human implements Valuable{
 
 	@Override
 	public double EstimateValue(int month) {
-		// TODO Auto-generated method stub
-		return 0;
+		return double POSITIVE_INFINITY; 
 	}
 	public String toString(){
 		return String.format("Human name:",name,"\n","registered age",age);
