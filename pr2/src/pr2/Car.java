@@ -14,4 +14,8 @@ public class Car implements Valuable {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	public String toString(){
+		return String.format("Car name:",name,"\n","initial price:",price);
+		
+	}
 }

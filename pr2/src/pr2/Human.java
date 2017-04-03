@@ -14,5 +14,8 @@ public class Human implements Valuable{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	public String toString(){
+		return String.format("Human name:",name,"\n","registered age",age);
+		
+	}
 }

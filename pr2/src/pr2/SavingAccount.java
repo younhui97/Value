@@ -54,6 +54,8 @@ public class SavingAccount extends Account implements Valuable{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	public String toString(){
+		return String.format("SavingAccount_Balance:",balance);
+	}
 }
 

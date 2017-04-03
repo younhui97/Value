@@ -86,4 +86,7 @@ public class CheckingAccount extends Account implements Valuable{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	public String toString(){
+		return String.format("CheckingAccount_Balance:",balance);
+	}
 }
