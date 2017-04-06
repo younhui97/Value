@@ -83,11 +83,10 @@ public class CheckingAccount extends Account implements Valuable{
 
 	@Override
 	public double EstimateValue(int month) {
-		balance=(balance+(balance*loan_interest*month));
-		System.out.print(balance);
-		return 0;
+		balance=(balance+(balance*interest*month));
+		return balance;
 	}
 	public String toString(){
-		return String.format("CheckingAccount_Balance:",balance);
+		return String.format("CheckingAccount_Balance:"+balance);
 	}
 }
