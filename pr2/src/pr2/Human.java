@@ -8,7 +8,7 @@ public class Human implements Valuable{
 		this.name=name;
 		this.age=age;
 	}
-
+ 
 	public String toString(){
 		return String.format("Human name:"+name+"\n"+"registered age:"+age);
 		

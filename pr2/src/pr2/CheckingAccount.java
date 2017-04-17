@@ -37,7 +37,7 @@ public class CheckingAccount extends Account implements Valuable{
 			System.out.print(nextmonth);
 		}
 		else if (balance>0){
-			nextmonth=(balance+(balance*interest));
+			nextmonth=(balance+(balance*interest)); 
 			System.out.print(nextmonth);
 		}
 	}*/

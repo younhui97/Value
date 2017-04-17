@@ -11,7 +11,7 @@ public abstract class Account{
 	public double getBalance(){
 		return balance;
 	}
-	
+	 
 	public abstract double getWithdrawableAccount();
 	
 	public abstract void passTime(int time);

@@ -49,7 +49,7 @@ public class AccountTest {
 						System.out.printf("Account1의 잔액 : $%.2f\n",account1.getBalance());
 						System.out.printf("Account1의 출금가능액 : $%.2f\n",account1.getWithdrawableAccount());
 						System.out.println("------------------------------------------------------");
-						
+						 
 						System.out.println("$150 출금");
 						account1.debit(150);
 						System.out.printf("Account1의 잔액 : $%.2f\n",account1.getBalance());

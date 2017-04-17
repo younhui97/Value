@@ -8,7 +8,7 @@ public class Car implements Valuable {
 		this.name=name;
 		this.price=price;
 	}
-
+ 
 	@Override
 	public double EstimateValue(int month) {
 		double nprice;
