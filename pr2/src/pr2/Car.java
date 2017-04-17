@@ -12,8 +12,16 @@ public class Car implements Valuable {
 	@Override
 	public double EstimateValue(int month) {
 		double nprice;
+		double nnprice = 0;
+		nprice=nnprice;
 		nprice= price*0.8*(Math.pow(0.99,month));
 		return nprice;
+	}
+	
+	public double EstimateValue() {
+		double nnprice;
+		nnprice= price*0.8*(Math.pow(0.99,1));
+		return nnprice;
 	}
 	public String toString(){
 		return String.format("Car name:"+name+"\n"+"initial price:"+price);

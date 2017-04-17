@@ -15,7 +15,10 @@ public class Human implements Valuable{
 	}
 	
     @Override 
-	public double EstimateValue(int month) {
+	public double EstimateValue(int month) { 
+		return Double.POSITIVE_INFINITY;
+	}
+    public double EstimateValue() { 
 		return Double.POSITIVE_INFINITY;
 	}
 }

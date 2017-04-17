@@ -3,7 +3,7 @@ public class CheckingAccount extends Account implements Valuable{
 	private double interest;
 	private double loan_interest;	
 	private double loan;
-
+	public double nbalance;
 
 	
 	public CheckingAccount(double m,double credit_limit,double interest,double loan_interest){
@@ -70,20 +70,45 @@ public class CheckingAccount extends Account implements Valuable{
 		}
 	}
 	
-	public void isBankrupted(){
-		boolean a1=((-1*balance)>credit_limit);
-		if (a1){
-			System.out.printf("Bankrupted!!\n");
+	public void passTime(){
+		//double nextbalance;
+		if (balance<0){
+			//balance = balance*(Math.pow(1+loan_interest,month));
+			balance=(balance+(balance*loan_interest*1));
+			System.out.print(1);
+			System.out.printf("1 month later: %.2f",balance);
+			System.out.print("\n");
+		}
+		else if (balance>0){
+			//balance = balance*(Math.pow(1+interest,month));
+			balance=(balance+(balance*loan_interest*1));
+			System.out.print(1);
+			System.out.printf("month(s) later: %.2f",balance);
+			System.out.print("\n");
+		}
+	}
+	
+	public boolean isBankrupted(){
+		if ((balance)>credit_limit){
+			//System.out.printf("Bankrupted!!\n");
+			return true;
 		}
 		else{
-			System.out.print("Not Bankrupted.\n");
+			//System.out.print("Not Bankrupted.\n");
+			return true;
 		}
 		//return a1;
 	}
 
 	@Override
 	public double EstimateValue(int month) {
-		balance=(balance+(balance*interest*month));
+		nbalance=(nbalance+(nbalance*interest*month));
+		return nbalance;
+	}
+	
+	public double EstimateValue() {
+		nbalance=balance;
+		balance = (balance+(balance*interest*1));
 		return balance;
 	}
 	public String toString(){

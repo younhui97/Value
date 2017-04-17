@@ -4,6 +4,7 @@ public class SavingAccount extends Account implements Valuable{
 	private int month;
 	private double loan;
 	private int numonth;
+	public double nbalance;
 	SavingAccount(double m,double loan) {
 		super(m);
 		this.loan=loan;
@@ -19,6 +20,15 @@ public class SavingAccount extends Account implements Valuable{
 	public void passTime(int month){
 		this.setMonth(month);
 		numonth+=month;
+		if(numonth==12){
+		balance = balance*(Math.pow(1+loan,numonth));
+		}
+		
+	}
+	
+	public void passTime(){
+		this.setMonth(1);
+		numonth+=1;
 		if(numonth==12){
 		balance = balance*(Math.pow(1+loan,numonth));
 		}
@@ -51,7 +61,13 @@ public class SavingAccount extends Account implements Valuable{
 
 	@Override
 	public double EstimateValue(int month) {
-		balance = balance*(Math.pow(1+loan,month));
+		nbalance = nbalance*(Math.pow(1+loan,month));
+		return nbalance;
+	}
+	
+	public double EstimateValue() {
+		nbalance=balance;
+		balance = balance*(Math.pow(1+loan,1));
 		return balance;
 	}
 	public String toString(){
